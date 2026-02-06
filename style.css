@@ -65,7 +65,8 @@ header {
   z-index: 3;
   bottom: -11%;
   justify-self: anchor-center;
-  width: 42%;
+  width: 40%;
+  top: 25%;
 }
 
 /* Substitua .layer-orange-cutout por isso */
@@ -78,9 +79,10 @@ header {
   transform: translateX(-50%); /* Centraliza no eixo X */
   width: 40%; /* Ajuste o tamanho da Terra aqui */
   height: auto;
-  z-index: 2;
+  z-index: 1;
   /* Importante: evitar 'piscadas' na troca de imagem */
   backface-visibility: hidden;
+  top: 25%;
 }
 /* CAMADA 1.5: Título Principal */
 .main-title {
@@ -92,15 +94,20 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Fraunces";
+  font-family: "Axiforma";
   font-weight: 1000;
-  color: white;
+  color: #f4f4f4;
   letter-spacing: 0.11em;
   text-align: center; /* Centralizado */
   font-size: 3vw;
   max-width: max-content;
-  z-index: 1; /* Atrás da imagem cheia, mas na frente do fundo */
+  z-index: 3;
   opacity: 0; /* Começa invisível, JS vai mostrar */
+}
+
+.main-title span {
+  font-family: "Rocksalt";
+  color: #ff8b1a;
 }
 
 /* CAMADA 1: Fundo Sólido Azul */
@@ -186,21 +193,21 @@ header {
 }
 
 .titles {
-  font-family: "Fraunces";
+  font-family: "Axiforma";
   font-weight: 900;
-  color: hsl(212, 27%, 19%);
+  color: #ea6601;
   letter-spacing: 0.03em;
   text-align: left;
-  font-size: 3vw;
+  font-size: 3rem;
 }
 
 .textes {
-  font-family: "Barlow";
+  font-family: "Axiforma";
   font-weight: 600;
-  color: hsl(232, 10%, 55%);
+  color: #292423;
   letter-spacing: 0.03em;
   text-align: left;
-  font-size: 1.1vw;
+  font-size: 1.1rem;
   line-height: 2vw;
 }
 
@@ -209,7 +216,7 @@ header {
   font-weight: 900;
   letter-spacing: 0.1vw;
   text-align: left;
-  font-size: 1vw;
+  font-size: 1.1rem;
   color: hsl(212, 27%, 19%);
   text-decoration-line: underline;
   text-decoration-color: hsl(7, 99%, 70%);
@@ -217,41 +224,55 @@ header {
 }
 
 .link-learn-more-yellow {
-  font-family: "Fraunces";
+  font-family: "Axiforma-Bolditalic";
   font-weight: 900;
   letter-spacing: 0.1vw;
   text-align: left;
-  font-size: 1vw;
-  color: hsl(212, 27%, 19%);
+  font-size: 2rem;
+  color: #0a0a6e;
   text-decoration-line: underline;
-  text-decoration-color: hsl(51, 100%, 49%);
+  text-decoration-color: #ea6601;
   text-decoration-thickness: 0.5vw;
+  margin-top: 2rem;
 }
 
-.titles-on-grid {
-  font-family: "Fraunces";
+.titles-on-grid-right {
+  font-family: "Rocksalt";
   font-weight: 900;
-  color: hsl(167, 40%, 24%);
+  color: #ea6601;
+  text-align: center;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.titles-on-grid-left {
+  font-family: "Rocksalt";
+  font-weight: 1000;
+  color: #ea6601;
   letter-spacing: 0.03em;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3rem;
 }
 
 .textes-on-grid {
-  font-family: "Barlow";
+  font-family: "Axiforma";
   font-weight: 600;
-  color: hsl(167, 40%, 24%);
+  color: #fff1d7;
   letter-spacing: 0.03em;
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.25vw;
   line-height: 2vw;
+}
+
+.grid {
+  background-color: #f4f4f4;
 }
 
 /* =========================================
    FOOTER E REVIEWS
    ========================================= */
 footer {
-  background-color: hsl(168, 34%, 61%);
+  background-color: #130fbb;
 }
 
 .footer {
@@ -272,9 +293,9 @@ footer {
 }
 
 .services {
-  font-family: "Barlow";
+  font-family: "Maxiforma";
   font-weight: 600;
-  color: hsl(167, 40%, 24%);
+  color: #fff1d7;
   letter-spacing: 0.03em;
   text-align: center;
   font-size: 1.5vw;
@@ -285,8 +306,10 @@ footer {
 }
 
 .footer-link {
+  font-family: "Maxiforma";
+  font-weight: 600;
   text-decoration: none;
-  color: hsl(167, 40%, 24%);
+  color: #f4f4f4;
 }
 
 .footer-link:hover {
@@ -307,14 +330,14 @@ footer {
 .icon-footer {
   width: 2vw;
   height: auto;
-  fill: hsl(167, 40%, 24%);
+  fill: #f4f4f4;
 }
 
 .icon-footer:hover {
   fill: white;
 }
 
-.div-reviews {
+.div-team {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -331,19 +354,19 @@ footer {
   font-size: 1.5vw;
 }
 
-.reviews {
+.team {
   display: flex;
   justify-content: space-evenly;
 }
 
-.review-detail {
+.team-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.review-image {
+.team_profile {
   width: 72px;
   border-radius: 50%;
   margin-bottom: 3vw;
@@ -379,6 +402,44 @@ footer {
   font-size: 1vw;
 }
 
+.div6 {
+  background-color: #130fbb;
+}
+.images-design {
+  width: 50%;
+  height: 50%;
+  place-self: center;
+  display: block;
+  margin-top: 50px;
+}
+
+.images-webdev {
+  width: 50%;
+  height: 50%;
+  place-self: center;
+  display: block;
+}
+@font-face {
+  font-family: "Axiforma"; /* O nome que você vai usar no código */
+  src: url("./fonts/AXIFORMA/Axiforma-Regular.ttf") format("truetype"); /* O caminho do arquivo */
+  font-weight: 400; /* Peso normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-Bolditalic"; /* O nome que você vai usar no código */
+  src: url("./fonts/AXIFORMA/Axiforma-BoldItalic.ttf") format("truetype"); /* O caminho do arquivo */
+  font-weight: 800; /* Peso normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RockSalt"; /* O nome que você vai usar no código */
+  src: url("./fonts/ROCK SALT/RockSalt-Regular.ttf") format("truetype"); /* O caminho do arquivo */
+  font-weight: 400; /* Peso normal */
+  font-style: normal;
+}
+
 /* =========================================
    MEDIA QUERIES (DESKTOP)
    ========================================= */
@@ -401,7 +462,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-inline: 20%;
+    margin-inline: 10%;
   }
   .div2 {
     grid-area: 1 / 2 / 2 / 3;
@@ -417,6 +478,7 @@ footer {
     margin-inline: 20%;
   }
   .div5 {
+    background-color: #130fbb;
     grid-area: 3 / 1 / 4 / 2;
     position: relative;
     display: inline-block;
