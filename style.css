@@ -53,7 +53,23 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 7; /* Garante que o menu fique acima de tudo */
+  z-index: 7;
+  padding: 1vw 0; /* Dá uma área de respiro para o hover */
+  background-color: transparent; /* Começa invisível */
+  transition: height 0.8s ease 0s;
+  height: 6rem;
+}
+
+/* O efeito de Hover */
+.navigation:hover {
+  background: #de7010;
+  background: linear-gradient(
+    154deg,
+    rgba(222, 112, 16, 1) 0%,
+    rgba(42, 40, 199, 1) 53%
+  ); /* O azul #3ebfff com um pouco de transparência */
+  backdrop-filter: blur(10px);
+  height: 8rem; /* Opcional: dá um efeito de vidro fosco chique */
 }
 
 /* CAMADA 3: Imagem Original (Capa) */
@@ -131,21 +147,23 @@ header {
    ========================================= */
 .navigation-container-desktop {
   position: absolute;
-  margin-left: 63vw;
+  right: 5vw; /* Substituir margin-left por right facilita o alinhamento */
   display: flex;
-  justify-content: flex-start;
-  margin-top: 3vw;
+  align-items: center; /* Alinha os links e o botão verticalmente */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navigation-logo {
   position: absolute;
-  margin-top: 1vw;
-  margin-left: 1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 2vw;
 }
 
 .nav-contact {
   background-color: white;
-  font-family: "Fraunces";
+  font-family: "Axiforma-Bolditalic";
   font-weight: 700;
   color: black;
   letter-spacing: 0.03em;
@@ -164,13 +182,14 @@ header {
 }
 
 .navigation-links {
-  font-family: "Barlow";
-  font-weight: 500;
+  font-family: "Axiforma";
+  font-weight: 400;
   color: white;
   letter-spacing: 0.03em;
   font-size: 1.5vw;
   margin-left: 2vw;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .icon-arrow-responsive {
@@ -212,12 +231,12 @@ header {
 }
 
 .link-learn-more-red {
-  font-family: "Fraunces";
-  font-weight: 900;
+  font-family: "Axiforma-Bolditalic";
+  font-weight: 1000;
   letter-spacing: 0.1vw;
   text-align: left;
   font-size: 1.1rem;
-  color: hsl(212, 27%, 19%);
+  color: #0a0a6e;
   text-decoration-line: underline;
   text-decoration-color: hsl(7, 99%, 70%);
   text-decoration-thickness: 0.5vw;
@@ -241,7 +260,7 @@ header {
   font-weight: 900;
   color: #ea6601;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   white-space: nowrap;
 }
 
@@ -306,8 +325,8 @@ footer {
 }
 
 .footer-link {
-  font-family: "Maxiforma";
-  font-weight: 600;
+  font-family: "Axiforma";
+  font-weight: 400;
   text-decoration: none;
   color: #f4f4f4;
 }
@@ -346,9 +365,9 @@ footer {
 
 .testimonials {
   margin-bottom: 6vw;
-  font-family: "Fraunces";
+  font-family: "Axiforma";
   font-weight: 900;
-  color: hsl(210, 4%, 67%);
+  color: #0a0a6e;
   letter-spacing: 0.4em;
   text-align: center;
   font-size: 1.5vw;
@@ -357,6 +376,7 @@ footer {
 .team {
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline;
 }
 
 .team-detail {
@@ -372,21 +392,10 @@ footer {
   margin-bottom: 3vw;
 }
 
-.review-text {
-  font-family: "Barlow";
-  font-weight: 600;
-  color: hsl(213, 9%, 39%);
-  letter-spacing: 0.03em;
-  text-align: center;
-  font-size: 1vw;
-  margin-bottom: 2vw;
-  line-height: 2vw;
-}
-
 .review-name {
-  font-family: "Fraunces";
-  font-weight: 600;
-  color: hsl(213, 9%, 39%);
+  font-family: "Rocksalt";
+  font-weight: 800;
+  color: #ea6601;
   letter-spacing: 0.03em;
   text-align: center;
   font-size: 1vw;
